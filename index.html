@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>better weather</title>
+    <!--add favicon-->
+    <!--add bootstrap link-->
     <!--google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +17,64 @@
     <link rel="stylesheet" src="assets/css/styles.css">
 </head>
 <body>
+    <header>
+        <!--add icon or image-->
+        <p id="headerTitle">better weather</p>
+    </header>
+    <div id="forecastAccordion">
+        <!--add accordion here-->
+    </div>
+    <div id="currentDay">
+        <section id="city">
+            <p id="cityName"></p>
+            <p id="todaysDate"></p>
+        </section>
+        <main id="mainContent">
+            <section id="temp">
+                <div id="tempHeader">
+                    <i class="fa-solid fa-temperature-three-quarters"></i>
+                    <p id="tempTitle">temperature</p>
+                </div>
+                <div id="tempContent"></div>
+            </section>
+            <section id="wind">
+                <div id="windHeader">
+                    <i class="fa-solid fa-wind"></i>
+                    <p id="windTitle">wind speed</p>
+                </div>
+                <div id="windContent"></div>
+            </section>
+            <section id="humidity">
+                <div id="humidityHeader">
+                    <i class="fa-solid fa-droplet"></i>
+                    <p id="humidityTitle">humidity</p>
+                </div>
+                <div id="humidityContent"></div>
+            </section>
+            <section id="uv">
+                <div id="uvHeader">
+                    <i class="fa-solid fa-sun"></i>
+                    <p id="uvTitle">uv index</p>
+                </div>
+                <div id="uvContent"></div>
+            </section>
+        </main>
+    </div>
+    <div id="citySearchSection">
+        <div id="citySearch">
+            <!--add search box here-->
+        </div>
+        <div id="cityHistory">
+            <div id="city1"></div>
+            <div id="city2"></div>
+            <div id="city3"></div>
+            <div id="city4"></div>
+            <div id="city5"></div>
+        </div>
+    </div>
+    <footer>
+        <!--add personal links here-->
+    </footer>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
