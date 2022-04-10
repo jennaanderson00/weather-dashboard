@@ -13,3 +13,7 @@ background-image: linear-gradient(#0B02CE, #2E2B7D);
     --header-font: 'Coiny', cursive;
     --body-font: 'Dosis', sans-serif;
 }
+
+header {
+    font-family: var(--header-font);
+}
