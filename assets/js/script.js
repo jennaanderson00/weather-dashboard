@@ -16,22 +16,22 @@ uv index color codes conditions
 future conditions include a 5-day forecast with aforementioned information
 */
 
-// Keeps track of city names that were searched for
+// city search history
 var history = []
 
 // run script after DOM loads
 $(function() {
-    // ===================================================== Populate City History 
+    // populate city search history
     // TODO using jQuery populate list of cities in DOM using the history array
-    
 
-    // ===================================================== Get City Name
+
+    // get city name from search input
     $("#searchBtn").on("click", function () {
         // Get the value of the search input box
         const city = $("#form1").val();
         console.log(`City => ${city}`);
 
-        // ===================================================== Get Coordinates 
+        // fetch current weather api to get coordinates
         var lat = '';
         var lon = '';
         var getCoordsUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=1324309e66ef2185354950fa5e92e01d`;
@@ -45,11 +45,11 @@ $(function() {
             console.log(`Coordinates Lat ==> ${lat}`);
             console.log(`Coordinates Lon ==> ${lon}`);
 
-            // ===================================================== Get Weather Data
-            // format moment.js
+            /* format moment.js
             var now = moment().format("MM-DD-YYYY");
-            var currentTime = moment().hour();
-            // open weather map fetch
+            var currentTime = moment().hour(); */
+
+            // fetch onecall api to get weather data
             var openWeather = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=1324309e66ef2185354950fa5e92e01d&units=imperial`;
             const settings = {
                 "async": true,
@@ -79,8 +79,8 @@ $(function() {
                 $("#windContent").html(cityWind);
                 $("#humidityContent").html(cityHum);
                 $("#uvContent").html(cityUV);
+                
                 // tomorrows forecast
-                // for loop here?
                 var cityTemp1 = response.daily[0].temp.day;
                 var cityConditions1 = response.daily[0].weather[0].main;
                 var cityHum1 = response.daily[0].humidity;
@@ -91,16 +91,58 @@ $(function() {
                 $("#humDay1").html(cityHum1);
                 $("#windDay1").html(cityWind1);
                 $("#uvDay1").html(cityUV1);
+
+                // current day + 2 forecast
+                var cityTemp2 = response.daily[1].temp.day;
+                var cityConditions2 = response.daily[1].weather[0].main;
+                var cityHum2 = response.daily[1].humidity;
+                var cityWind2 = response.daily[1].wind_speed;
+                var cityUV2 = response.daily[1].uvi;
+                $("#tempDay2").html(cityTemp2);
+                $("#condDay2").html(cityConditions2);
+                $("#humDay2").html(cityHum2);
+                $("#windDay2").html(cityWind2);
+                $("#uvDay2").html(cityUV2);
+                
+                // current day + 3 forecast
+                var cityTemp3 = response.daily[2].temp.day;
+                var cityConditions3 = response.daily[2].weather[0].main;
+                var cityHum3 = response.daily[2].humidity;
+                var cityWind3 = response.daily[2].wind_speed;
+                var cityUV3 = response.daily[2].uvi;
+                $("#tempDay3").html(cityTemp3);
+                $("#condDay3").html(cityConditions3);
+                $("#humDay3").html(cityHum3);
+                $("#windDay3").html(cityWind3);
+                $("#uvDay3").html(cityUV3);
+
+                // current day + 4 forecast
+                var cityTemp4 = response.daily[3].temp.day;
+                var cityConditions4 = response.daily[3].weather[0].main;
+                var cityHum4 = response.daily[3].humidity;
+                var cityWind4 = response.daily[3].wind_speed;
+                var cityUV4 = response.daily[3].uvi;
+                $("#tempDay4").html(cityTemp4);
+                $("#condDay4").html(cityConditions4);
+                $("#humDay4").html(cityHum4);
+                $("#windDay4").html(cityWind4);
+                $("#uvDay4").html(cityUV4);
+
+                // current day + 5 forecast
+                var cityTemp5 = response.daily[4].temp.day;
+                var cityConditions5 = response.daily[4].weather[0].main;
+                var cityHum5 = response.daily[4].humidity;
+                var cityWind5 = response.daily[4].wind_speed;
+                var cityUV5 = response.daily[4].uvi;
+                $("#tempDay5").html(cityTemp5);
+                $("#condDay5").html(cityConditions5);
+                $("#humDay5").html(cityHum5);
+                $("#windDay5").html(cityWind5);
+                $("#uvDay5").html(cityUV5);
             });
 
         })
 
     })
-
-    
-
-    
-
 })
 
-//https://community-open-weather-map.p.rapidapi.com/weather?q=London%2Cuk&lat=0&lon=0
