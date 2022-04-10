@@ -19,19 +19,25 @@ future conditions include a 5-day forecast with aforementioned information
 // run script after DOM loads
 $(function() {
     // open weather map fetch
-    var openWeather = "https://community-open-weather-map.p.rapidapi.com/weather?q=London%2Cuk&lat=0&lon=0&callback=test&id=2172797&lang=null&units=imperial&mode=xml";
+    var openWeather = "https://api.openweathermap.org/data/2.5/weather?lat=44.97&lon=-92.75&appid=1324309e66ef2185354950fa5e92e01d&units=imperial";
     const settings = {
         "async": true,
         "crossDomain": true,
         "url": openWeather,
         "method": "GET",
-        "headers": {
-            "X-RapidAPI-Host": "community-open-weather-map.p.rapidapi.com",
-            "X-RapidAPI-Key": "a00a496f1bmsh126580ae57458fcp1e35c7jsnb70d8a845e98"
-        }
     };
     
     $.ajax(settings).done(function (response) {
         console.log(response);
+    });
+
+    $.ajax({
+        "url": openWeather,
+        "method": "GET",
+    }).then(function (response) {
+        var cityTemp = response.main.temp;
+        var cityHum = response.main.humidity;
+        var cityWind = response.wind.speed;
+        $("#tempContent").html(cityTemp);
     });
 })

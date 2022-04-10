@@ -16,4 +16,16 @@ background-image: linear-gradient(#0B02CE, #2E2B7D);
 
 header {
     font-family: var(--header-font);
+    font-size: 60px;
+    text-align: center;
+}
+
+.card button {
+    font-family: var(--body-font);
+    font-size: 18px;
+}
+
+.btn-link {
+    text-decoration: none;
+    color: #000000;
 }
