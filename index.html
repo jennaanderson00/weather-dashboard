@@ -22,6 +22,7 @@
         <!--add icon or image-->
         <p id="headerTitle">better weather</p>
     </header>
+    <!--five day forecast-->
     <div class="accordion" id="forecastAccordion">
         <!--weekday 1 forecast-->
         <div class="card">
@@ -99,12 +100,11 @@
             </div>
         </div>
     </div>
-    <div id="currentDay">
-        <section id="city">
-            <p id="cityName"></p>
-            <p id="todaysDate"></p>
-        </section>
-        <main id="mainContent">
+    <!--current day forecast-->
+    <div class="jumbotron" id="currentDay">
+        <h1 class="display-4">city name</h1>
+        <p class="lead">todays date</p>
+            <hr class="my-4" id="mainContent">
             <section id="temp">
                 <div id="tempHeader">
                     <i class="fa-solid fa-temperature-three-quarters"></i>
@@ -133,7 +133,6 @@
                 </div>
                 <div id="uvContent"></div>
             </section>
-        </main>
     </div>
     <div id="citySearchSection">
         <div id="citySearch">
