@@ -16,36 +16,33 @@ uv index color codes conditions
 future conditions include a 5-day forecast with aforementioned information
 */
 
-// city search history
-var history = []
-
 // run script after DOM loads
 $(function() {
-    // populate city search history
-    var history1 = history[history.length - 1];
-    var history2 = history[history.length - 2];
-    var history3 = history[history.length - 3];
-    var history4 = history[history.length - 4];
-    var history5 = history[history.length - 5];
-
-    // insert searched cities into HTML
-    $("#searchCity1").html(history1);
-    $("#searchCity2").html(history2);
-    $("#searchCity3").html(history3);
-    $("#searchCity4").html(history4);
-    $("#searchCity5").html(history5);
+    // city search history
+    var history = []
 
     // format moment.js
     var now = moment().format("MM-DD-YYYY");
     var currentTime = moment().hour();
+    var currentDay = moment().day();
     $("#currentDate").html(now);
+    /* create function based on moment().day()
+    if (currentDay == 0) {
+
+    } else if (currentDay == 1) {
+
+    } else if (currentDay == 2) {
+
+    } else if () */
+
+    // if else function for click
 
     // get city name from search input
     $("#searchBtn").on("click", function () {
         // Get the value of the search input box
         const city = $("#form1").val();
         console.log(`City => ${city}`);
-
+        // display city name in html
         // fetch current weather api to get coordinates
         var lat = '';
         var lon = '';
@@ -78,7 +75,22 @@ $(function() {
                 "method": "GET",
             }).then(function (response) {
                 // add searched cities to history array
-               
+               history.push(city);
+
+               // populate city search history
+                var history1 = history[history.length - 1];
+                var history2 = history[history.length - 2];
+                var history3 = history[history.length - 3];
+                var history4 = history[history.length - 4];
+                var history5 = history[history.length - 5];
+
+                // insert searched cities into HTML
+                $("#searchCity1").html(history1);
+                $("#searchCity2").html(history2);
+                $("#searchCity3").html(history3);
+                $("#searchCity4").html(history4);
+                $("#searchCity5").html(history5);
+
                 // UV index color codes
                 if (response.current.uvi < 2) {
                     $("#uvContent").addClass("favorableUV");
