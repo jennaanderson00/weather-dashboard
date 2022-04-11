@@ -26,14 +26,58 @@ $(function() {
     var currentTime = moment().hour();
     var currentDay = moment().day();
     $("#currentDate").html(now);
-    /* create function based on moment().day()
+    
+    // display day of the week
     if (currentDay == 0) {
-
+        $("#currentWeekDay").html("Sunday");
+        $("#day1Btn").html("Monday");
+        $("#day2Btn").html("Tuesday");
+        $("#day3Btn").html("Wednesday");
+        $("#day4Btn").html("Thursday");
+        $("#day5Btn").html("Friday");
     } else if (currentDay == 1) {
-
+        $("#currentWeekDay").html("Monday");
+        $("#day1Btn").html("Tuesday");
+        $("#day2Btn").html("Wednesday");
+        $("#day3Btn").html("Thursday");
+        $("#day4Btn").html("Friday");
+        $("#day5Btn").html("Saturday");
     } else if (currentDay == 2) {
-
-    } else if () */
+        $("#currentWeekDay").html("Tuesday");
+        $("#day1Btn").html("Wednesday");
+        $("#day2Btn").html("Thursday");
+        $("#day3Btn").html("Friday");
+        $("#day4Btn").html("Saturday");
+        $("#day5Btn").html("Sunday");
+    } else if (currentDay == 3) {
+        $("#currentWeekDay").html("Wednesday");
+        $("#day1Btn").html("Thursday");
+        $("#day2Btn").html("Friday");
+        $("#day3Btn").html("Saturday");
+        $("#day4Btn").html("Sunday");
+        $("#day5Btn").html("Monday");
+    } else if (currentDay == 4) {
+        $("#currentWeekDay").html("Thursday");
+        $("#day1Btn").html("Friday");
+        $("#day2Btn").html("Saturday");
+        $("#day3Btn").html("Sunday");
+        $("#day4Btn").html("Monday");
+        $("#day5Btn").html("Tuesday");
+    } else if (currentDay == 5) {
+        $("#currentWeekDay").html("Friday");
+        $("#day1Btn").html("Saturday");
+        $("#day2Btn").html("Sunday");
+        $("#day3Btn").html("Monday");
+        $("#day4Btn").html("Tuesday");
+        $("#day5Btn").html("Wednesday");
+    } else if (currentDay == 6) {
+        $("#currentWeekDay").html("Saturday");
+        $("#day1Btn").html("Sunday");
+        $("#day2Btn").html("Monday");
+        $("#day3Btn").html("Tuesday");
+        $("#day4Btn").html("Wednesday");
+        $("#day5Btn").html("Thursday");
+    }
 
     // if else function for click
 
