@@ -78,6 +78,15 @@ $(function() {
                 "method": "GET",
             }).then(function (response) {
                 // add searched cities to history array
+               
+                // UV index color codes
+                if (response.current.uvi < 2) {
+                    $("#uvContent").addClass("favorableUV");
+                } else if (response.current.uvi > 2 && response.current.uvi < 5) {
+                    $("#uvContent").addClass("moderateUV");
+                } else {
+                    $("#uvContent").addClass("severeUV");
+                }
 
                 // current weather
                 var cityTemp = response.current.temp;
