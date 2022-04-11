@@ -18,12 +18,8 @@ future conditions include a 5-day forecast with aforementioned information
 
 // run script after DOM loads
 $(function() {
-    // city search history
-    var history = []
-
     // format moment.js
     var now = moment().format("MM-DD-YYYY");
-    var currentTime = moment().hour();
     var currentDay = moment().day();
     $("#currentDate").html(now);
     
@@ -79,6 +75,9 @@ $(function() {
         $("#day5Btn").html("thursday");
     }
 
+    // city search history
+    var history = []
+
     // get city name from search input
     $("#searchBtn").on("click", function () {
         // Get the value of the search input box
@@ -120,23 +119,35 @@ $(function() {
                 "method": "GET",
             }).then(function (response) {
                 // add searched cities to history array
-               history.push(city);
+                history.push(city);
 
-               // populate city search history
+                // get search history from local storage
+                var cityHistory1 = localStorage.getItem("storedCity1");
+                var cityHistory2 = localStorage.getItem("storedCity2");
+                var cityHistory3 = localStorage.getItem("storedCity3");
+                var cityHistory4 = localStorage.getItem("storedCity4");
+                var cityHistory5 = localStorage.getItem("storedCity5");
+
+                // display searched cities in HTML
+                $("#searchCity1").html(cityHistory1);
+                $("#searchCity2").html(cityHistory2);
+                $("#searchCity3").html(cityHistory3);
+                $("#searchCity4").html(cityHistory4);
+                $("#searchCity5").html(cityHistory5);
+
+                // populate city search history
                 var history1 = history[history.length - 1];
                 var history2 = history[history.length - 2];
                 var history3 = history[history.length - 3];
                 var history4 = history[history.length - 4];
                 var history5 = history[history.length - 5];
 
-                // insert searched cities into HTML
-                $("#searchCity1").html(history1);
-                $("#searchCity2").html(history2);
-                $("#searchCity3").html(history3);
-                $("#searchCity4").html(history4);
-                $("#searchCity5").html(history5);
-
-                // display city information from search history on click
+                // pass searched cities to localStorage
+                localStorage.setItem("storedCity1", history1);
+                localStorage.setItem("storedCity2", history2);
+                localStorage.setItem("storedCity3", history3);
+                localStorage.setItem("storedCity4", history4);
+                localStorage.setItem("storedCity5", history5);
 
                 // UV index color codes
                 if (response.current.uvi < 2) {
