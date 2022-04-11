@@ -79,14 +79,15 @@ $(function() {
         $("#day5Btn").html("Thursday");
     }
 
-    // if else function for click
-
     // get city name from search input
     $("#searchBtn").on("click", function () {
         // Get the value of the search input box
         const city = $("#form1").val();
         console.log(`City => ${city}`);
+        
         // display city name in html
+        $("#jumbotronCity").html(city);
+
         // fetch current weather api to get coordinates
         var lat = '';
         var lon = '';
