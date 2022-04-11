@@ -22,6 +22,74 @@
         <!--add icon or image-->
         <p id="headerTitle">better weather</p>
     </header>
+    <!--city search-->
+    <div id="citySearchSection">
+        <div id="citySearch">
+            <div class="input-group">
+                <div class="form-outline">
+                    <input type="search" id="form1" class="form-control" />
+                    <label class="form-label" for="form1">find a city</label>
+                </div>
+                <button type="button" class="btn btn-primary" id="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+        <!--city search history-->
+        <ul class="nav" id="cityHistory">
+            <li class="nav-item">
+                <a class="nav-link" id="searchCity1" href="#">city 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="searchCity2" href="#">city 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  id="searchCity3" href="#">city 3</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="searchCity4" href="#">city 4</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="searchCity5" href="#">city 5</a>
+            </li>
+        </ul>
+    </div>
+    <!--current day forecast-->
+    <div class="jumbotron" id="currentDay">
+        <h1 id="jumbotronCity" class="display-4"></h1>
+        <p class="lead" id="currentDate"></p>
+        <p class="lead" id="currentWeekDay"></p>
+            <hr class="my-4" id="mainContent">
+            <section id="temp">
+                <div id="tempHeader">
+                    <i class="fa-solid fa-temperature-three-quarters"></i>
+                    <p id="tempTitle">temperature</p>
+                </div>
+                <div id="tempContent"></div>
+                <div id="tempConditions"></div>
+            </section>
+            <section id="wind">
+                <div id="windHeader">
+                    <i class="fa-solid fa-wind"></i>
+                    <p id="windTitle">wind speed</p>
+                </div>
+                <div id="windContent"></div>
+            </section>
+            <section id="humidity">
+                <div id="humidityHeader">
+                    <i class="fa-solid fa-droplet"></i>
+                    <p id="humidityTitle">humidity</p>
+                </div>
+                <div id="humidityContent"></div>
+            </section>
+            <section id="uv">
+                <div id="uvHeader">
+                    <i class="fa-solid fa-sun"></i>
+                    <p id="uvTitle">uv index</p>
+                </div>
+                <div id="uvContent"></div>
+            </section>
+    </div>
     <!--five day forecast-->
     <div class="accordion" id="forecastAccordion">
         <!--weekday 1 forecast-->
@@ -119,74 +187,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!--current day forecast-->
-    <div class="jumbotron" id="currentDay">
-        <h1 id="jumbotronCity" class="display-4"></h1>
-        <p class="lead" id="currentDate"></p>
-        <p class="lead" id="currentWeekDay"></p>
-            <hr class="my-4" id="mainContent">
-            <section id="temp">
-                <div id="tempHeader">
-                    <i class="fa-solid fa-temperature-three-quarters"></i>
-                    <p id="tempTitle">temperature</p>
-                </div>
-                <div id="tempContent"></div>
-                <div id="tempConditions"></div>
-            </section>
-            <section id="wind">
-                <div id="windHeader">
-                    <i class="fa-solid fa-wind"></i>
-                    <p id="windTitle">wind speed</p>
-                </div>
-                <div id="windContent"></div>
-            </section>
-            <section id="humidity">
-                <div id="humidityHeader">
-                    <i class="fa-solid fa-droplet"></i>
-                    <p id="humidityTitle">humidity</p>
-                </div>
-                <div id="humidityContent"></div>
-            </section>
-            <section id="uv">
-                <div id="uvHeader">
-                    <i class="fa-solid fa-sun"></i>
-                    <p id="uvTitle">uv index</p>
-                </div>
-                <div id="uvContent"></div>
-            </section>
-    </div>
-    <!--city search-->
-    <div id="citySearchSection">
-        <div id="citySearch">
-            <div class="input-group">
-                <div class="form-outline">
-                    <input type="search" id="form1" class="form-control" />
-                    <label class="form-label" for="form1">find a city</label>
-                </div>
-                <button type="button" class="btn btn-primary" id="searchBtn">
-                    <i class="fas fa-search"></i>
-                </button>
-            </div>
-        </div>
-        <!--city search history-->
-        <ul class="nav" id="cityHistory">
-            <li class="nav-item">
-                <a class="nav-link" id="searchCity1" href="#">city 1</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="searchCity2" href="#">city 2</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link"  id="searchCity3" href="#">city 3</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="searchCity4" href="#">city 4</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="searchCity5" href="#">city 5</a>
-            </li>
-        </ul>
     </div>
     <footer>
         <!--add personal links here-->

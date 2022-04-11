@@ -136,6 +136,8 @@ $(function() {
                 $("#searchCity4").html(history4);
                 $("#searchCity5").html(history5);
 
+                // display city information from search history on click
+
                 // UV index color codes
                 if (response.current.uvi < 2) {
                     $("#uvContent").addClass("favorableUV");
