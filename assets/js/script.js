@@ -141,48 +141,66 @@ $(function() {
                 // UV index color codes
                 if (response.current.uvi < 2) {
                     $("#uvContent").addClass("favorableUV");
+                    $("#uvContent").removeClass("moderateUV");
+                    $("#uvContent").removeClass("severeUV");
                 } else if (response.current.uvi > 2 && response.current.uvi < 5) {
                     $("#uvContent").addClass("moderateUV");
+                    $("#uvContent").removeClass("severeUV");
                 } else if (response.current.uvi > 5) {
                     $("#uvContent").addClass("severeUV");
                 }
 
                 if (response.daily[0].uvi < 2) {
                     $("#uvDay1").addClass("favorableUV");
+                    $("#uvDay1").removeClass("moderateUV");
+                    $("#uvDay1").removeClass("severeUV");
                 } else if (response.daily[0].uvi > 2 && response.daily[0].uvi < 5) {
                     $("#uvDay1").addClass("moderateUV");
+                    $("#uvDay1").removeClass("severeUV");
                 } else if (response.daily[0].uvi > 5) {
                     $("#uvDay1").addClass("severeUV");
                 }
 
                 if (response.daily[1].uvi < 2) {
                     $("#uvDay2").addClass("favorableUV");
+                    $("#uvDay2").removeClass("moderateUV");
+                    $("#uvDay2").removeClass("severeUV");
                 } else if (response.daily[1].uvi > 2 && response.daily[1].uvi < 5) {
                     $("#uvDay2").addClass("moderateUV");
+                    $("#uvDay2").removeClass("severeUV");
                 } else if (response.daily[1].uvi > 5) {
                     $("#uvDay2").addClass("severeUV");
                 }
 
                 if (response.daily[2].uvi < 2) {
                     $("#uvDay3").addClass("favorableUV");
+                    $("#uvDay3").removeClass("moderateUV");
+                    $("#uvDay3").removeClass("severeUV");
                 } else if (response.daily[2].uvi > 2 && response.daily[2].uvi < 5) {
                     $("#uvDay3").addClass("moderateUV");
+                    $("#uvDay3").removeClass("severeUV");
                 } else if (response.daily[2].uvi > 5) {
                     $("#uvDay3").addClass("severeUV");
                 }
 
                 if (response.daily[3].uvi < 2) {
                     $("#uvDay4").addClass("favorableUV");
+                    $("#uvDay4").removeClass("moderateUV");
+                    $("#uvDay4").removeClass("severeUV");
                 } else if (response.daily[3].uvi > 2 && response.daily[3].uvi < 5) {
                     $("#uvDay4").addClass("moderateUV");
+                    $("#uvDay4").removeClass("severeUV");
                 } else if (response.daily[3].uvi > 5) {
                     $("#uvDay4").addClass("severeUV");
                 }
 
                 if (response.daily[4].uvi < 2) {
                     $("#uvDay5").addClass("favorableUV");
+                    $("#uvDay5").removeClass("moderateUV");
+                    $("#uvDay5").removeClass("severeUV");
                 } else if (response.daily[4].uvi > 2 && response.daily[4].uvi < 5) {
                     $("#uvDay5").addClass("moderateUV");
+                    $("#uvDay5").removeClass("severeUV");
                 } else if (response.daily[4].uvi > 5) {
                     $("#uvDay5").addClass("severeUV");
                 }
