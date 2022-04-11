@@ -28,15 +28,14 @@
             <div class="input-group">
                 <div class="form-outline">
                     <input type="search" id="form1" class="form-control" />
-                    <label class="form-label" for="form1">find a city</label>
                 </div>
-                <button type="button" class="btn btn-primary" id="searchBtn">
+                <button type="button" class="btn btn-secondary" id="searchBtn">
                     <i class="fas fa-search"></i>
                 </button>
             </div>
         </div>
         <!--city search history-->
-        <ul class="nav" id="cityHistory">
+        <ul class="nav row justify-content-center" id="cityHistory">
             <li class="nav-item">
                 <a class="nav-link" id="searchCity1" href="#">city 1</a>
             </li>
@@ -55,15 +54,14 @@
         </ul>
     </div>
     <!--current day forecast-->
-    <div class="jumbotron" id="currentDay">
-        <h1 id="jumbotronCity" class="display-4"></h1>
+    <div class="jumbotron container" id="currentDay">
+        <h1 id="jumbotronCity" class="display-4 row justify-content-center"></h1>
         <p class="lead" id="currentDate"></p>
         <p class="lead" id="currentWeekDay"></p>
             <hr class="my-4" id="mainContent">
             <section id="temp">
                 <div id="tempHeader">
                     <i class="fa-solid fa-temperature-three-quarters"></i>
-                    <p id="tempTitle">temperature</p>
                 </div>
                 <div id="tempContent"></div>
                 <div id="tempConditions"></div>
@@ -71,30 +69,27 @@
             <section id="wind">
                 <div id="windHeader">
                     <i class="fa-solid fa-wind"></i>
-                    <p id="windTitle">wind speed</p>
                 </div>
                 <div id="windContent"></div>
             </section>
             <section id="humidity">
                 <div id="humidityHeader">
                     <i class="fa-solid fa-droplet"></i>
-                    <p id="humidityTitle">humidity</p>
                 </div>
                 <div id="humidityContent"></div>
             </section>
             <section id="uv">
                 <div id="uvHeader">
                     <i class="fa-solid fa-sun"></i>
-                    <p id="uvTitle">uv index</p>
                 </div>
                 <div id="uvContent"></div>
             </section>
     </div>
     <!--five day forecast-->
-    <div class="accordion" id="forecastAccordion">
+    <div class="accordion container" id="forecastAccordion">
         <!--weekday 1 forecast-->
-        <div class="card">
-            <div class="card-header" id="headingOne">
+        <div class="card row justify-content-center">
+            <div class="card-header " id="headingOne">
                 <h2 class="mb-0">
                     <button id="day1Btn" class="btn btn-link" type="button" data-toggle="collapse" data-target="collapseOne" aria-expanded="true" aria-controls="#collapseOne">
                         
@@ -105,15 +100,15 @@
                 <div class="card-body">
                     <div id="tempDay1"></div>
                     <div id="condDay1"></div>
-                    <div id="humDay1"></div>
                     <div id="windDay1"></div>
+                    <div id="humDay1"></div>
                     <div id="uvDay1"></div>
                 </div>
             </div>
         </div>
         <!--weekday 2 forecast-->
-        <div class="card">
-            <div class="card-header" id="headingTwo">
+        <div class="card row">
+            <div class="card-header " id="headingTwo">
                 <h2 class="mb-0">
                     <button id="day2Btn" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="#collapseTwo">
                         
@@ -124,15 +119,15 @@
                 <div class="card-body">
                     <div id="tempDay2"></div>
                     <div id="condDay2"></div>
-                    <div id="humDay2"></div>
                     <div id="windDay2"></div>
+                    <div id="humDay2"></div>
                     <div id="uvDay2"></div>
                 </div>
             </div>
         </div>
         <!--weekday 3 forecast-->
-        <div class="card">
-            <div class="card-header" id="headingThree">
+        <div class="card row">
+            <div class="card-header " id="headingThree">
                 <h2 class="mb-0">
                     <button id="day3Btn" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="#collapseThree">
                         
@@ -143,15 +138,15 @@
                 <div class="card-body">
                     <div id="tempDay3"></div>
                     <div id="condDay3"></div>
-                    <div id="humDay3"></div>
                     <div id="windDay3"></div>
+                    <div id="humDay3"></div>
                     <div id="uvDay3"></div>
                 </div>
             </div>
         </div>
         <!--weekday 4 forecast-->
-        <div class="card">
-            <div class="card-header" id="headingFour">
+        <div class="card row">
+            <div class="card-header " id="headingFour">
                 <h2 class="mb-0">
                     <button id="day4Btn" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="#collapseFour">
                         
@@ -162,15 +157,15 @@
                 <div class="card-body">
                     <div id="tempDay4"></div>
                     <div id="condDay4"></div>
-                    <div id="humDay4"></div>
                     <div id="windDay4"></div>
+                    <div id="humDay4"></div>
                     <div id="uvDay4"></div>
                 </div>
             </div>
         </div>
         <!--weekday 5 forecast-->
-        <div class="card">
-            <div class="card-header" id="headingFive">
+        <div class="card row">
+            <div class="card-header " id="headingFive">
                 <h2 class="mb-0">
                     <button id="day5Btn" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="#collapseFive">
                         
@@ -181,8 +176,8 @@
                 <div class="card-body">
                     <div id="tempDay5"></div>
                     <div id="condDay5"></div>
-                    <div id="humDay5"></div>
                     <div id="windDay5"></div>
+                    <div id="humDay5"></div>
                     <div id="uvDay5"></div>
                 </div>
             </div>

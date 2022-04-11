@@ -41,3 +41,20 @@ header {
 .severeUV {
     background-color: #C8513C;
 }
+
+.input-group {
+    display: flex;
+    justify-content: center;
+}
+
+#currentDay {
+    text-align: center;
+}
+
+#headingOne, #headingTwo, #headingThree, #headingFour, #headingFive {
+    text-align: center;
+}
+
+.card-body {
+    text-align: center;
+}

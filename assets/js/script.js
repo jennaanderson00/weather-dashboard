@@ -29,54 +29,54 @@ $(function() {
     
     // display day of the week
     if (currentDay == 0) {
-        $("#currentWeekDay").html("Sunday");
-        $("#day1Btn").html("Monday");
-        $("#day2Btn").html("Tuesday");
-        $("#day3Btn").html("Wednesday");
-        $("#day4Btn").html("Thursday");
-        $("#day5Btn").html("Friday");
+        $("#currentWeekDay").html("sunday");
+        $("#day1Btn").html("monday");
+        $("#day2Btn").html("tuesday");
+        $("#day3Btn").html("wednesday");
+        $("#day4Btn").html("thursday");
+        $("#day5Btn").html("friday");
     } else if (currentDay == 1) {
-        $("#currentWeekDay").html("Monday");
-        $("#day1Btn").html("Tuesday");
-        $("#day2Btn").html("Wednesday");
-        $("#day3Btn").html("Thursday");
-        $("#day4Btn").html("Friday");
-        $("#day5Btn").html("Saturday");
+        $("#currentWeekDay").html("monday");
+        $("#day1Btn").html("tuesday");
+        $("#day2Btn").html("wednesday");
+        $("#day3Btn").html("thursday");
+        $("#day4Btn").html("friday");
+        $("#day5Btn").html("saturday");
     } else if (currentDay == 2) {
-        $("#currentWeekDay").html("Tuesday");
-        $("#day1Btn").html("Wednesday");
-        $("#day2Btn").html("Thursday");
-        $("#day3Btn").html("Friday");
-        $("#day4Btn").html("Saturday");
-        $("#day5Btn").html("Sunday");
+        $("#currentWeekDay").html("tuesday");
+        $("#day1Btn").html("wednesday");
+        $("#day2Btn").html("thursday");
+        $("#day3Btn").html("friday");
+        $("#day4Btn").html("saturday");
+        $("#day5Btn").html("sunday");
     } else if (currentDay == 3) {
-        $("#currentWeekDay").html("Wednesday");
-        $("#day1Btn").html("Thursday");
-        $("#day2Btn").html("Friday");
-        $("#day3Btn").html("Saturday");
-        $("#day4Btn").html("Sunday");
-        $("#day5Btn").html("Monday");
+        $("#currentWeekDay").html("wednesday");
+        $("#day1Btn").html("thursday");
+        $("#day2Btn").html("friday");
+        $("#day3Btn").html("saturday");
+        $("#day4Btn").html("sunday");
+        $("#day5Btn").html("monday");
     } else if (currentDay == 4) {
-        $("#currentWeekDay").html("Thursday");
-        $("#day1Btn").html("Friday");
-        $("#day2Btn").html("Saturday");
-        $("#day3Btn").html("Sunday");
-        $("#day4Btn").html("Monday");
-        $("#day5Btn").html("Tuesday");
+        $("#currentWeekDay").html("thursday");
+        $("#day1Btn").html("friday");
+        $("#day2Btn").html("saturday");
+        $("#day3Btn").html("sunday");
+        $("#day4Btn").html("monday");
+        $("#day5Btn").html("tuesday");
     } else if (currentDay == 5) {
-        $("#currentWeekDay").html("Friday");
-        $("#day1Btn").html("Saturday");
-        $("#day2Btn").html("Sunday");
-        $("#day3Btn").html("Monday");
-        $("#day4Btn").html("Tuesday");
-        $("#day5Btn").html("Wednesday");
+        $("#currentWeekDay").html("friday");
+        $("#day1Btn").html("saturday");
+        $("#day2Btn").html("sunday");
+        $("#day3Btn").html("monday");
+        $("#day4Btn").html("tuesday");
+        $("#day5Btn").html("wednesday");
     } else if (currentDay == 6) {
-        $("#currentWeekDay").html("Saturday");
-        $("#day1Btn").html("Sunday");
-        $("#day2Btn").html("Monday");
-        $("#day3Btn").html("Tuesday");
-        $("#day4Btn").html("Wednesday");
-        $("#day5Btn").html("Thursday");
+        $("#currentWeekDay").html("saturday");
+        $("#day1Btn").html("sunday");
+        $("#day2Btn").html("monday");
+        $("#day3Btn").html("tuesday");
+        $("#day4Btn").html("wednesday");
+        $("#day5Btn").html("thursday");
     }
 
     // get city name from search input
@@ -150,73 +150,73 @@ $(function() {
                 // current weather
                 var cityTemp = response.current.temp;
                 var cityConditions = response.current.weather[0].description;
-                var cityHum = response.current.humidity;
                 var cityWind = response.current.wind_speed;
+                var cityHum = response.current.humidity;
                 var cityUV = response.current.uvi;
-                $("#tempContent").html(cityTemp);
-                $("#tempConditions").html(cityConditions);
-                $("#windContent").html(cityWind);
-                $("#humidityContent").html(cityHum);
-                $("#uvContent").html(cityUV);
+                $("#tempContent").html("temperature: " + cityTemp);
+                $("#tempConditions").html("conditions: " + cityConditions);
+                $("#windContent").html("wind speed: " + cityWind);
+                $("#humidityContent").html("humidity: " + cityHum);
+                $("#uvContent").html("UV index: " + cityUV);
                 
                 // tomorrows forecast
                 var cityTemp1 = response.daily[0].temp.day;
                 var cityConditions1 = response.daily[0].weather[0].main;
-                var cityHum1 = response.daily[0].humidity;
                 var cityWind1 = response.daily[0].wind_speed;
+                var cityHum1 = response.daily[0].humidity;
                 var cityUV1 = response.daily[0].uvi;
-                $("#tempDay1").html(cityTemp1);
-                $("#condDay1").html(cityConditions1);
-                $("#humDay1").html(cityHum1);
-                $("#windDay1").html(cityWind1);
+                $("#tempDay1").html("temperature: " + cityTemp1);
+                $("#condDay1").html("conditions: " + cityConditions1);
+                $("#windDay1").html("wind speed: " + cityWind1);
+                $("#humDay1").html("humidity: " + cityHum1);
                 $("#uvDay1").html(cityUV1);
 
                 // current day + 2 forecast
                 var cityTemp2 = response.daily[1].temp.day;
                 var cityConditions2 = response.daily[1].weather[0].main;
-                var cityHum2 = response.daily[1].humidity;
                 var cityWind2 = response.daily[1].wind_speed;
+                var cityHum2 = response.daily[1].humidity;
                 var cityUV2 = response.daily[1].uvi;
-                $("#tempDay2").html(cityTemp2);
-                $("#condDay2").html(cityConditions2);
-                $("#humDay2").html(cityHum2);
-                $("#windDay2").html(cityWind2);
+                $("#tempDay2").html("temperature: " + cityTemp2);
+                $("#condDay2").html("conditions: " + cityConditions2);
+                $("#windDay2").html("wind speed: " + cityWind2);
+                $("#humDay2").html("humidity: " + cityHum2);
                 $("#uvDay2").html(cityUV2);
                 
                 // current day + 3 forecast
                 var cityTemp3 = response.daily[2].temp.day;
                 var cityConditions3 = response.daily[2].weather[0].main;
-                var cityHum3 = response.daily[2].humidity;
                 var cityWind3 = response.daily[2].wind_speed;
+                var cityHum3 = response.daily[2].humidity;
                 var cityUV3 = response.daily[2].uvi;
-                $("#tempDay3").html(cityTemp3);
-                $("#condDay3").html(cityConditions3);
-                $("#humDay3").html(cityHum3);
-                $("#windDay3").html(cityWind3);
+                $("#tempDay3").html("temperature: " + cityTemp3);
+                $("#condDay3").html("conditions: " + cityConditions3);
+                $("#windDay3").html("wind speed: " + cityWind3);
+                $("#humDay3").html("humidity: " + cityHum3);
                 $("#uvDay3").html(cityUV3);
 
                 // current day + 4 forecast
                 var cityTemp4 = response.daily[3].temp.day;
                 var cityConditions4 = response.daily[3].weather[0].main;
-                var cityHum4 = response.daily[3].humidity;
                 var cityWind4 = response.daily[3].wind_speed;
+                var cityHum4 = response.daily[3].humidity;
                 var cityUV4 = response.daily[3].uvi;
-                $("#tempDay4").html(cityTemp4);
-                $("#condDay4").html(cityConditions4);
-                $("#humDay4").html(cityHum4);
-                $("#windDay4").html(cityWind4);
+                $("#tempDay4").html("temperature: " + cityTemp4);
+                $("#condDay4").html("conditions: " + cityConditions4);
+                $("#windDay4").html("wind speed: " + cityWind4);
+                $("#humDay4").html("humidity: " + cityHum4);
                 $("#uvDay4").html(cityUV4);
 
                 // current day + 5 forecast
                 var cityTemp5 = response.daily[4].temp.day;
                 var cityConditions5 = response.daily[4].weather[0].main;
-                var cityHum5 = response.daily[4].humidity;
                 var cityWind5 = response.daily[4].wind_speed;
+                var cityHum5 = response.daily[4].humidity;
                 var cityUV5 = response.daily[4].uvi;
-                $("#tempDay5").html(cityTemp5);
-                $("#condDay5").html(cityConditions5);
-                $("#humDay5").html(cityHum5);
-                $("#windDay5").html(cityWind5);
+                $("#tempDay5").html("temperature: " + cityTemp5);
+                $("#condDay5").html("conditions: " + cityConditions5);
+                $("#windDay5").html("wind speed: " + cityWind5);
+                $("#humDay5").html("humidity: " + cityHum5);
                 $("#uvDay5").html(cityUV5);
             });
 
@@ -224,4 +224,3 @@ $(function() {
 
     })
 })
-
