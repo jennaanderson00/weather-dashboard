@@ -22,8 +22,23 @@ var history = []
 // run script after DOM loads
 $(function() {
     // populate city search history
-    // TODO using jQuery populate list of cities in DOM using the history array
+    var history1 = history[history.length - 1];
+    var history2 = history[history.length - 2];
+    var history3 = history[history.length - 3];
+    var history4 = history[history.length - 4];
+    var history5 = history[history.length - 5];
 
+    // insert searched cities into HTML
+    $("#searchCity1").html(history1);
+    $("#searchCity2").html(history2);
+    $("#searchCity3").html(history3);
+    $("#searchCity4").html(history4);
+    $("#searchCity5").html(history5);
+
+    // format moment.js
+    var now = moment().format("MM-DD-YYYY");
+    var currentTime = moment().hour();
+    $("#currentDate").html(now);
 
     // get city name from search input
     $("#searchBtn").on("click", function () {
@@ -45,10 +60,6 @@ $(function() {
             console.log(`Coordinates Lat ==> ${lat}`);
             console.log(`Coordinates Lon ==> ${lon}`);
 
-            /* format moment.js
-            var now = moment().format("MM-DD-YYYY");
-            var currentTime = moment().hour(); */
-
             // fetch onecall api to get weather data
             var openWeather = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=1324309e66ef2185354950fa5e92e01d&units=imperial`;
             const settings = {
@@ -66,7 +77,7 @@ $(function() {
                 "url": openWeather,
                 "method": "GET",
             }).then(function (response) {
-                // TODO Push city name into history array
+                // add searched cities to history array
 
                 // current weather
                 var cityTemp = response.current.temp;
