@@ -143,8 +143,48 @@ $(function() {
                     $("#uvContent").addClass("favorableUV");
                 } else if (response.current.uvi > 2 && response.current.uvi < 5) {
                     $("#uvContent").addClass("moderateUV");
-                } else {
+                } else if (response.current.uvi > 5) {
                     $("#uvContent").addClass("severeUV");
+                }
+
+                if (response.daily[0].uvi < 2) {
+                    $("#uvDay1").addClass("favorableUV");
+                } else if (response.daily[0].uvi > 2 && response.daily[0].uvi < 5) {
+                    $("#uvDay1").addClass("moderateUV");
+                } else if (response.daily[0].uvi > 5) {
+                    $("#uvDay1").addClass("severeUV");
+                }
+
+                if (response.daily[1].uvi < 2) {
+                    $("#uvDay2").addClass("favorableUV");
+                } else if (response.daily[1].uvi > 2 && response.daily[1].uvi < 5) {
+                    $("#uvDay2").addClass("moderateUV");
+                } else if (response.daily[1].uvi > 5) {
+                    $("#uvDay2").addClass("severeUV");
+                }
+
+                if (response.daily[2].uvi < 2) {
+                    $("#uvDay3").addClass("favorableUV");
+                } else if (response.daily[2].uvi > 2 && response.daily[2].uvi < 5) {
+                    $("#uvDay3").addClass("moderateUV");
+                } else if (response.daily[2].uvi > 5) {
+                    $("#uvDay3").addClass("severeUV");
+                }
+
+                if (response.daily[3].uvi < 2) {
+                    $("#uvDay4").addClass("favorableUV");
+                } else if (response.daily[3].uvi > 2 && response.daily[3].uvi < 5) {
+                    $("#uvDay4").addClass("moderateUV");
+                } else if (response.daily[3].uvi > 5) {
+                    $("#uvDay4").addClass("severeUV");
+                }
+
+                if (response.daily[4].uvi < 2) {
+                    $("#uvDay5").addClass("favorableUV");
+                } else if (response.daily[4].uvi > 2 && response.daily[4].uvi < 5) {
+                    $("#uvDay5").addClass("moderateUV");
+                } else if (response.daily[4].uvi > 5) {
+                    $("#uvDay5").addClass("severeUV");
                 }
 
                 // current weather
@@ -169,7 +209,7 @@ $(function() {
                 $("#condDay1").html("conditions: " + cityConditions1);
                 $("#windDay1").html("wind speed: " + cityWind1);
                 $("#humDay1").html("humidity: " + cityHum1);
-                $("#uvDay1").html(cityUV1);
+                $("#uvDay1").html("UV index: " + cityUV1);
 
                 // current day + 2 forecast
                 var cityTemp2 = response.daily[1].temp.day;
@@ -181,7 +221,7 @@ $(function() {
                 $("#condDay2").html("conditions: " + cityConditions2);
                 $("#windDay2").html("wind speed: " + cityWind2);
                 $("#humDay2").html("humidity: " + cityHum2);
-                $("#uvDay2").html(cityUV2);
+                $("#uvDay2").html("UV index: " + cityUV2);
                 
                 // current day + 3 forecast
                 var cityTemp3 = response.daily[2].temp.day;
@@ -193,7 +233,7 @@ $(function() {
                 $("#condDay3").html("conditions: " + cityConditions3);
                 $("#windDay3").html("wind speed: " + cityWind3);
                 $("#humDay3").html("humidity: " + cityHum3);
-                $("#uvDay3").html(cityUV3);
+                $("#uvDay3").html("UV index: " + cityUV3);
 
                 // current day + 4 forecast
                 var cityTemp4 = response.daily[3].temp.day;
@@ -205,7 +245,7 @@ $(function() {
                 $("#condDay4").html("conditions: " + cityConditions4);
                 $("#windDay4").html("wind speed: " + cityWind4);
                 $("#humDay4").html("humidity: " + cityHum4);
-                $("#uvDay4").html(cityUV4);
+                $("#uvDay4").html("UV index: " + cityUV4);
 
                 // current day + 5 forecast
                 var cityTemp5 = response.daily[4].temp.day;
@@ -217,7 +257,7 @@ $(function() {
                 $("#condDay5").html("conditions: " + cityConditions5);
                 $("#windDay5").html("wind speed: " + cityWind5);
                 $("#humDay5").html("humidity: " + cityHum5);
-                $("#uvDay5").html(cityUV5);
+                $("#uvDay5").html("UV index: " + cityUV5);
             });
 
         })
