@@ -17,4 +17,5 @@
 * Font Awesome
 * jQuery
 
+visit better weather at https://jennaanderson00.github.io/weather-dashboard/
 "better weather" is a project site created for the UofW Bootcamp module-6 challenge.
